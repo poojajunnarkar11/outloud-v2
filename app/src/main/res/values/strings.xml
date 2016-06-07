@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OutLoud</string>
+    <string name="speak">Waiting to speak</string>
+</resources>
