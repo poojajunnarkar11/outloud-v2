@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".pageone" />
+        <activity android:name=".pagetwo" />
+        <activity android:name=".pagethree"></activity>
     </application>
 
 </manifest>
