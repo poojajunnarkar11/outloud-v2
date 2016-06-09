@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -78,28 +77,28 @@ public class MainActivity extends Activity {
                     /*
                     String logic
                     */
-                    String sentence = text.get(0) + text.get(1) + text.get(2);
-                    int index1 = sentence.indexOf("1");
-                    int index2 = sentence.indexOf("2");
-                    int index3 = sentence.indexOf("3");
+                    String sentence = text.get(0)+ " " + text.get(1)+ " "  + text.get(2);
+                    int index1 = sentence.indexOf("profile");
+                    int index2 = sentence.indexOf("settings");
+                    int index3 = sentence.indexOf("home");
 
                     if (index1 != -1) {
                         Intent in1 = new Intent(MainActivity.this, pageone.class);
-                        String msg = "Okay, opening page 1";
+                        String msg = "Okay, opening page your profile";
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         tts.speak(msg, TextToSpeech.QUEUE_FLUSH, null);
                         startActivity(in1);
                     }
                     else if (index2 != -1) {
                         Intent in2 = new Intent(MainActivity.this, pagetwo.class);
-                        String msg = "Okay, opening page 2";
+                        String msg = "Okay, opening your settings";
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         tts.speak(msg, TextToSpeech.QUEUE_FLUSH, null);
                         startActivity(in2);
                     }
                     else if (index3 != -1) {
                         Intent in3 = new Intent(MainActivity.this, pagethree.class);
-                        String msg = "Okay, opening page 3";
+                        String msg = "Okay, opening home page";
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         tts.speak(msg, TextToSpeech.QUEUE_FLUSH, null);
                         startActivity(in3);
